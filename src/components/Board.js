@@ -1,5 +1,4 @@
 // This component renders the squares and manages their state.
-
 import React, { useState } from 'react';
 import Square from './Square';
 
