@@ -5,7 +5,7 @@ import React from 'react';
 const Square = ({ value, onClick }) => {
   return (
     <button
-      className='w-16 h-16 bg-white border border-gray-400 text-2xl font-bold'
+      className='w-16 h-16 bg-white border border-gray-400 text-2xl font-bold flex items-center justify-center'
       onClick={onClick}
     >
       {value}
