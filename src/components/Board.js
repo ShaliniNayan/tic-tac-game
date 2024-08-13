@@ -16,6 +16,11 @@ const Board = () => {
     setIsXNext(!isXNext);
   };
 
+  const handleReset = () => {
+    setSquares(Array(9).fill(null));
+    setIsXNext(true);
+  };
+
   const renderSquare = (index) => {
     return <Square value={squares[index]} onClick={() => handleClick(index)} />;
   };
@@ -26,9 +31,9 @@ const Board = () => {
     : `Next player: ${isXNext ? 'X' : 'O'}`;
 
   return (
-    <div>
+    <div className='text-center'>
       <div className='text-center mb-4 text-xl'>{status}</div>
-      <div className='grid grid-cols-3 gap-1 w-48 mx-auto'>
+      <div className='grid grid-cols-3 gap-1 w-48 mx-auto mb-4'>
         {renderSquare(0)}
         {renderSquare(1)}
         {renderSquare(2)}
@@ -39,6 +44,12 @@ const Board = () => {
         {renderSquare(7)}
         {renderSquare(8)}
       </div>
+      <button
+        onClick={handleReset}
+        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+      >
+        Reset Board
+      </button>
     </div>
   );
 };
