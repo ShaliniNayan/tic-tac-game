@@ -28,7 +28,7 @@ const Board = () => {
   return (
     <div>
       <div className='text-center mb-4 text-xl'>{status}</div>
-      <div className='grid grid-cols-3 gap-1'>
+      <div className='grid grid-cols-3 gap-1 w-48 mx-auto'>
         {renderSquare(0)}
         {renderSquare(1)}
         {renderSquare(2)}
