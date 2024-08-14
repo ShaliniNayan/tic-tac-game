@@ -11,9 +11,9 @@ const Board = () => {
     if (calculateWinner(newSquares) || newSquares[index]) {
       return;
     }
-    // newSquares[index] = isXNext ? 'X' : 'O';
-    // setSquares(newSquares);
-    // setIsXNext(!isXNext);
+    newSquares[index] = isXNext ? 'X' : 'O';
+    setSquares(newSquares);
+    setIsXNext(!isXNext);
   };
 
   const handleReset = () => {
